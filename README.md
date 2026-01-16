@@ -1,0 +1,2 @@
+# mcp-metabase-bd
+Metabase
