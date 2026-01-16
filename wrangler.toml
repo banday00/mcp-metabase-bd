@@ -1,0 +1,20 @@
+name = "metabase-mcp-server"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Environment Variables (gunakan wrangler secret untuk production)
+[vars]
+# METABASE_URL akan diset via wrangler secret
+
+# Untuk development
+[env.dev]
+vars = { METABASE_URL = "http://localhost:3000" }
+
+# Untuk production
+[env.production]
+# Set semua secrets via CLI:
+# wrangler secret put METABASE_URL
+# wrangler secret put METABASE_API_KEY
+# atau
+# wrangler secret put METABASE_USERNAME
+# wrangler secret put METABASE_PASSWORD
